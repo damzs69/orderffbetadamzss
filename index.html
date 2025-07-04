@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF Beta VIP Purchase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="owner-access">
+        <button id="ownerBtn">Owner</button>
+        <div id="ownerPanel" class="owner-panel">
+            <input type="password" id="ownerPassword" placeholder="Enter Password">
+            <button id="ownerLogin">Login</button>
+            <div id="ownerData" class="owner-data"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <img src="https://a.top4top.io/p_3471rkc7l1.jpg" alt="FF Beta VIP Logo">
+            <h1>HAI 👋 MAU BELI FF BETA VIP?</h1>
+            <p>Ikuti langkah-langkah di bawah ini:</p>
+        </div>
+
+        <div id="formStep1" class="form-section active">
+            <h2>Langkah 1: Data Pemesan</h2>
+            <div class="form-group">
+                <label for="phoneNumber">Nomor WhatsApp (awali dengan 62):</label>
+                <input type="text" id="phoneNumber" placeholder="62xxxxxxxxxxx" maxlength="13">
+                <small class="error" id="phoneError"></small>
+            </div>
+            <div class="form-group">
+                <label for="username">Username FF:</label>
+                <input type="text" id="username" placeholder="Masukkan username FF Anda">
+                <small class="error" id="userError"></small>
+            </div>
+            <button id="nextStep1" class="btn-next">Lanjut ke Pembayaran</button>
+        </div>
+
+        <div id="formStep2" class="form-section">
+            <h2>Langkah 2: Pembayaran</h2>
+            <p>Minimal pembayaran: Rp 10.000</p>
+            
+            <div class="payment-methods">
+                <div class="payment-option active" data-method="dana">
+                    <h3>DANA</h3>
+                    <p>Nomor DANA: 082129071128</p>
+                    <p>Atas nama: Yanti, Damzs, JB Damzs Store</p>
+                </div>
+                <div class="payment-option" data-method="qris">
+                    <h3>QRIS</h3>
+                    <img src="https://b.top4top.io/p_3471qzt601.jpg" alt="QRIS Payment" class="qris-img">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="paymentProof">Upload Bukti Transfer:</label>
+                <input type="file" id="paymentProof" accept="image/*">
+                <small class="error" id="proofError"></small>
+            </div>
+            <div class="form-group">
+                <label for="paymentAmount">Jumlah Transfer (Rp):</label>
+                <input type="number" id="paymentAmount" min="10000" value="10000">
+            </div>
+            <button id="submitPayment" class="btn-submit">Konfirmasi Pembayaran</button>
+        </div>
+
+        <div id="formStep3" class="form-section">
+            <h2>Pembayaran Berhasil!</h2>
+            <div class="success-message">
+                <p>Terima kasih telah membeli FF Beta VIP!</p>
+                <h3>Berikut data akun FF Beta Anda:</h3>
+                <div class="account-data">
+                    <p><strong>INJECTOR:</strong> <a href="https://sfl.gl/dITI2H" target="_blank">Download</a></p>
+                    <p><strong>FF GLOBAL:</strong> <a href="https://sfl.gl/VZHWy" target="_blank">Download</a></p>
+                    <p><strong>AKSES ID:</strong> <a href="https://ffkipas.my.id/" target="_blank">ffkipas.my.id</a></p>
+                    <p><strong>DASBOARD:</strong> <a href="https://ffkipas.my.id/panel/dashboard/" target="_blank">Dashboard</a></p>
+                    <p><strong>TUTORIAL:</strong> <a href="https://vt.tiktok.com/ZSkS5qhE5/" target="_blank">Tonton Tutorial</a></p>
+                </div>
+                <p class="warning">WAJIB BUKA SEMUA LINK DI ATAS!</p>
+            </div>
+        </div>
+
+        <div class="contact-support">
+            <p>Butuh bantuan? Hubungi Admin:</p>
+            <a href="https://wa.me/6282129071128" class="whatsapp-link" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                +62 821-2907-1128
+            </a>
+        </div>
+    </div>
+
+    <script src="validation.js"></script>
+    <script src="payment.js"></script>
+</body>
+</html>
